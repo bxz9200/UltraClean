@@ -12,7 +12,6 @@ Backdoor attacks are emerging threats to deep neural networks, which typically e
 ![image](https://user-images.githubusercontent.com/36553004/157376363-e7f06f36-543d-4ad0-91d7-25ed73278ed1.png)
 
 
-======================================================================================================
 folder <dirty-label attacks>: contains all code of dirty-label attacks.
 
 folder <models>: scripts of implementation of DNN models.
@@ -31,7 +30,7 @@ other python files: scripts of helper functions and utility functions for model 
 
 Trojan poisons generation follows: https://github.com/PurduePAML/TrojanNN
 
-======================================================================================================
+
 folder <clean-label attacks>: contains all code of clean-label attacks.
 
 folder <poisoned_class>: contains all code for the experiment of detecion on the poisoned class.
