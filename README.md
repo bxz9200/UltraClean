@@ -7,7 +7,7 @@ Backdoor attacks are emerging threats to deep neural networks, which typically e
 
 # Requirements
 
-# Repo structure
+# Repo Structure
 
 ![image](https://user-images.githubusercontent.com/36553004/157376363-e7f06f36-543d-4ad0-91d7-25ed73278ed1.png)
 
