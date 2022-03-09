@@ -9,55 +9,8 @@ Backdoor attacks are emerging threats to deep neural networks, which typically e
 
 # Repo structure
 
-The folder hierarchy of the <code>:
+![image](https://user-images.githubusercontent.com/36553004/157376363-e7f06f36-543d-4ad0-91d7-25ed73278ed1.png)
 
-<code>
-+-- dirty-label attacks
-¦   +-- <models>
-¦   +-- <Denoise>.py
-¦   +-- <train>.py
-¦   +-- <retrain.py>
-¦   +-- <badNets_generation>.py
-¦   +-- <blended_generation.py>
-¦   +-- ...
-+-- clean-label attacks
-¦   +-- SIG
-¦   ¦   +-- <poisoned_class>
-¦   ¦   ¦   +-- <run>.py
-¦   ¦   ¦   +-- <poison_generation>.py
-¦   ¦   ¦   +-- <train>.py
-¦   ¦   ¦   +-- <Denoise>.py
-¦   ¦   ¦   +-- <SVD>.py
-¦   ¦   ¦   +-- <test_Denoise>.py
-¦   ¦   ¦   +-- <test_SVD>.py
-¦   ¦   ¦   +-- <retrain>.py
-¦   ¦   ¦   +-- ...
-¦   ¦   +-- <whole_dataset>
-¦   ¦   ¦   +-- <run_all>.py
-¦   ¦   ¦   +-- <poison_generation>.py
-¦   ¦   ¦   +-- <train>.py
-¦   ¦   ¦   +-- <Denoise_allclasses>.py
-¦   ¦   ¦   +-- <test_Denoise_allclasses>.py
-¦   ¦   ¦   +-- <retrain>.py
-¦   ¦   ¦   +-- ...
-¦   +-- LCBD
-¦   ¦   +-- <poisoned_class>
-¦   ¦   ¦   +-- <run>.py
-¦   ¦   ¦   +-- <generate_poisoned_dataset.py>.py
-¦   ¦   ¦   +-- <train>.py
-¦   ¦   ¦   +-- ...
-¦   ¦   +-- <whole_dataset>
-¦   ¦   ¦   +-- <run_all>.py
-¦   ¦   ¦   +-- ...
-¦   +-- HTBD
-¦   ¦   +-- <poisoned_class>
-¦   ¦   ¦   +-- <run>.py
-¦   ¦   ¦   +-- <generate_poison.py>.py
-¦   ¦   ¦   +-- <finetune_and_test>.py
-¦   ¦   ¦   +-- ...
-¦   ¦   +-- <whole_dataset>
-¦   ¦   ¦   +-- <run_all>.py
-¦   ¦   ¦   +-- ...
 
 ======================================================================================================
 folder <dirty-label attacks>: contains all code of dirty-label attacks.
