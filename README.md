@@ -7,6 +7,110 @@ Backdoor attacks are emerging threats to deep neural networks, which typically e
 
 # Requirements
 
+# Repo structure
+
+The folder hierarchy of the <code>:
+
+<code>
++-- dirty-label attacks
+¦   +-- <models>
+¦   +-- <Denoise>.py
+¦   +-- <train>.py
+¦   +-- <retrain.py>
+¦   +-- <badNets_generation>.py
+¦   +-- <blended_generation.py>
+¦   +-- ...
++-- clean-label attacks
+¦   +-- SIG
+¦   ¦   +-- <poisoned_class>
+¦   ¦   ¦   +-- <run>.py
+¦   ¦   ¦   +-- <poison_generation>.py
+¦   ¦   ¦   +-- <train>.py
+¦   ¦   ¦   +-- <Denoise>.py
+¦   ¦   ¦   +-- <SVD>.py
+¦   ¦   ¦   +-- <test_Denoise>.py
+¦   ¦   ¦   +-- <test_SVD>.py
+¦   ¦   ¦   +-- <retrain>.py
+¦   ¦   ¦   +-- ...
+¦   ¦   +-- <whole_dataset>
+¦   ¦   ¦   +-- <run_all>.py
+¦   ¦   ¦   +-- <poison_generation>.py
+¦   ¦   ¦   +-- <train>.py
+¦   ¦   ¦   +-- <Denoise_allclasses>.py
+¦   ¦   ¦   +-- <test_Denoise_allclasses>.py
+¦   ¦   ¦   +-- <retrain>.py
+¦   ¦   ¦   +-- ...
+¦   +-- LCBD
+¦   ¦   +-- <poisoned_class>
+¦   ¦   ¦   +-- <run>.py
+¦   ¦   ¦   +-- <generate_poisoned_dataset.py>.py
+¦   ¦   ¦   +-- <train>.py
+¦   ¦   ¦   +-- ...
+¦   ¦   +-- <whole_dataset>
+¦   ¦   ¦   +-- <run_all>.py
+¦   ¦   ¦   +-- ...
+¦   +-- HTBD
+¦   ¦   +-- <poisoned_class>
+¦   ¦   ¦   +-- <run>.py
+¦   ¦   ¦   +-- <generate_poison.py>.py
+¦   ¦   ¦   +-- <finetune_and_test>.py
+¦   ¦   ¦   +-- ...
+¦   ¦   +-- <whole_dataset>
+¦   ¦   ¦   +-- <run_all>.py
+¦   ¦   ¦   +-- ...
+
+======================================================================================================
+folder <dirty-label attacks>: contains all code of dirty-label attacks.
+
+folder <models>: scripts of implementation of DNN models.
+
+badNets_generation.py: script to generate poisons using badNets.
+
+blended_generation.py: script to generate poisons using blended injection attack.
+
+train.py: the script to train DNN models.
+
+Denoise.py: the script to run the UltraClean framework for dirty-label attacks.
+
+retrain.py: the script to retrain model on the sanitized dataset.
+
+other python files: scripts of helper functions and utility functions for model training.
+
+Trojan poisons generation follows: https://github.com/PurduePAML/TrojanNN
+
+======================================================================================================
+folder <clean-label attacks>: contains all code of clean-label attacks.
+
+folder <poisoned_class>: contains all code for the experiment of detecion on the poisoned class.
+
+folder <whole_dataset>:  contains all code for the experiment of detecion on the whole training dataset.
+
+run.py: the all-in-one script to run the experiment flow of detection on the poisoned class.
+
+run_all.py: the all-in-one script to run the experiment flow of detection on the whole training dataset.
+
+poison_generation.py (SIG)/generate_poisoned_dataset.py (LCBD)/generate_poison.py (HTBD): scripts to generate poisoned samples (name varies because we keep the naming from the orignal repository).
+
+train.py (SIG and LCBD)/finetune_and_test (HTBD): scripts to train DNN models.
+
+Denoise.py: the script to run the UltraClean framework for detection on the poisoned class.
+
+Denoise_allclasses.py: the script to run the UltraClean framework for detection on the whole training dataset.
+
+SVD.py: the script to run SVD detection.
+
+test_Denoise.py: the script to measure post-clean accuracy and ASR of UltraClean for detection on the poisoned class.
+
+test_Denoise_allclasses.py: the script to measure post-clean accuracy and ASR of UltraClean for detection on the whole training dataset.
+
+test_SVD.py: the script to measure post-clean accuracy and ASR of SVD for detection on the poisoned class.
+
+retrain.py: the script to retrain model on the sanitized dataset.
+
+other python files: scripts of helper functions and utility functions for SIG, LCBD and HTBD attacks.
+
+
+
 # How to Run the Code
 
 # Useful links
