@@ -15,6 +15,16 @@ Backdoor attacks are emerging threats to deep neural networks, which typically e
 
 # How to Run the Code
 
+One can run UltraClean under two different scenarios:
+
+***1. On the poisoned class (same setting as [SVD](https://arxiv.org/pdf/1811.00636.pdf))*** where we assume that the defender already knows the poisoned class (i.e., target class)
+***2. On the whole training dataset (same setting as [STRIP](https://arxiv.org/pdf/1902.06531.pdf))*** where the defender does not have knowledge of the data poisoning process
+
+```
+cd clean-label attacks/HTBD/poisoned_class/
+python run.py
+```
+
 # Useful links
 * BadeNets: https://github.com/Kooscii/BadNets
 * Trojan: https://github.com/PurduePAML/TrojanNN
