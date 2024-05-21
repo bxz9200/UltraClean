@@ -41,3 +41,6 @@ python run_all.py
 * SIG: https://github.com/DreamtaleCore/Refool
 * LCBD: https://github.com/MadryLab/label-consistent-backdoor-code
 * HTBD: https://github.com/UMBCvision/Hidden-Trigger-Backdoor-Attacks
+* Smooth Trigger: https://github.com/YiZeng623/frequency-backdoor/tree/main
+* Sleeper Agent: https://github.com/hsouri/Sleeper-Agent
+* Backdoor Toolbox: https://github.com/THUYimingLi/BackdoorBox
